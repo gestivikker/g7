@@ -3,391 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G7 OFFICIAL</title>
-    
-    <!-- Memuat Tailwind CSS untuk styling -->
+    <title>Pendaftaran Trial Kompe G7</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Memuat font Inter dari Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
                     colors: {
-                        /* Mengubah warna utama menjadi tema Gold sesuai logo */
-                        g7primary: '#D4AF37', // Warna Emas (Gold)
-                        g7hover: '#B5952F',   // Warna Emas lebih gelap untuk hover
-                        g7accent: '#F3E5AB',  // Warna aksen emas terang
+                        esport: {
+                            dark: '#0f172a', // slate-900
+                            darker: '#0b1120',
+                            accent: '#00ffcc', // Neon cyan
+                            accentHover: '#00ccaa'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Rajdhani', 'sans-serif'], // Changing font to a more tech/esports one
+                        display: ['Teko', 'sans-serif']
                     }
                 }
             }
         }
     </script>
-    
     <style>
-        /* Animasi sederhana saat halaman dimuat */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in {
-            animation: fadeIn 0.6s ease-out forwards;
-        }
-        .delay-1 { animation-delay: 0.1s; }
-        .delay-2 { animation-delay: 0.2s; }
-        .delay-3 { animation-delay: 0.3s; }
-        .delay-4 { animation-delay: 0.4s; }
-        .delay-5 { animation-delay: 0.5s; }
-        .delay-6 { animation-delay: 0.6s; }
+        @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Teko:wght@500;600;700&display=swap');
         
-        /* Custom border gradient untuk tombol agar terlihat mewah */
-        .btn-gold-border {
-            border: 1px solid transparent;
-            background-clip: padding-box, border-box;
-            background-origin: padding-box, border-box;
-            background-image: linear-gradient(to right, #1f2937, #1f2937), linear-gradient(135deg, #D4AF37, #F3E5AB, #D4AF37);
+        body {
+            background-color: #0b1120;
+            background-image: radial-gradient(circle at top right, #1e293b, #0b1120);
+            color: #f8fafc;
         }
-    </style>
-</head>
-
-<body class="bg-gradient-to-br from-gray-900 via-black to-gray-900 min-h-screen flex items-center justify-center font-sans text-white p-4 sm:p-8 relative overflow-hidden">
-    
-    <!-- Ornamen background diubah ke warna emas/putih -->
-    <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-yellow-600/20 rounded-full mix-blend-screen filter blur-[128px]"></div>
-    <div class="absolute bottom-[-10%] right-[-10%] w-96 h-96 bg-gray-500/20 rounded-full mix-blend-screen filter blur-[128px]"></div>
-
-    <!-- Kontainer Profil dan Link -->
-    <main class="w-full max-w-md bg-black/60 backdrop-blur-xl p-8 rounded-3xl shadow-2xl border border-gray-800 z-10 animate-fade-in">
         
-        <header class="text-center mb-8">
-            <!-- Foto Profil menggunakan g7 (1).jpg -->
-            <div class="relative inline-block mb-4">
-                <img src="g7 (1).jpg" alt="Logo G7" 
-                     class="w-32 h-32 mx-auto rounded-full object-cover border-2 border-[#D4AF37] shadow-[0_0_20px_rgba(212,175,55,0.3)] bg-black">
-            </div>
-            
-            <h1 class="text-3xl font-bold tracking-widest mb-1 text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37]">G7 OFFICIAL</h1>
-            <p class="text-gray-400 text-sm font-medium tracking-wide">Portal Informasi & Pendaftaran Resmi</p>
-        </header>
-
-        <nav class="flex flex-col gap-4">
-            
-            <!-- 1. Persyaratan Join G7 -->
-            <button onclick="openModal()" 
-               class="group flex items-center justify-center gap-3 w-full p-4 btn-gold-border hover:bg-[#D4AF37]/10 rounded-2xl transition-all duration-300 shadow-lg hover:shadow-[#D4AF37]/20 transform hover:-translate-y-1 opacity-0 animate-fade-in delay-1">
-                <span class="text-xl">👑</span>
-                <span class="font-semibold tracking-wide text-gray-200 group-hover:text-[#D4AF37] transition-colors">PERSYARATAN JOIN G7</span>
-            </button>
-
-            <!-- 2. Link WhatsApp Open Member -->
-            <a href="https://chat.whatsapp.com/BZIvLBjWIFcCRGd3CfdMXd?s=cl&p=a&mlu=4&ilr=4" target="_blank" rel="noopener noreferrer" 
-               class="group flex items-center justify-center gap-3 w-full p-4 btn-gold-border hover:bg-[#D4AF37]/10 rounded-2xl transition-all duration-300 shadow-lg hover:shadow-[#D4AF37]/20 transform hover:-translate-y-1 opacity-0 animate-fade-in delay-2">
-                <span class="text-xl">💬</span>
-                <span class="font-semibold tracking-wide text-gray-200 group-hover:text-[#D4AF37] transition-colors">WHATSAPP OPEN MEMBER</span>
-            </a>
-
-            <!-- 3. Proposal Sponsor G7 -->
-            <a href="https://undangan-ratih-ardi.my.canva.site/g7-proposal-sponsorship" target="_blank" rel="noopener noreferrer" 
-               class="group flex items-center justify-center gap-3 w-full p-4 btn-gold-border hover:bg-[#D4AF37]/10 rounded-2xl transition-all duration-300 shadow-lg hover:shadow-[#D4AF37]/20 transform hover:-translate-y-1 opacity-0 animate-fade-in delay-3">
-                <span class="text-xl">📜</span>
-                <span class="font-semibold tracking-wide text-gray-200 group-hover:text-[#D4AF37] transition-colors">PROPOSAL SPONSOR G7</span>
-            </a>
-
-            <!-- 4. Link Discord G7 Umum -->
-            <a href="https://discord.gg/WarurUXT7" target="_blank" rel="noopener noreferrer" 
-               class="group flex items-center justify-center gap-3 w-full p-4 btn-gold-border hover:bg-[#D4AF37]/10 rounded-2xl transition-all duration-300 shadow-lg hover:shadow-[#D4AF37]/20 transform hover:-translate-y-1 opacity-0 animate-fade-in delay-4">
-                <span class="text-xl">⚔️</span>
-                <span class="font-semibold tracking-wide text-gray-200 group-hover:text-[#D4AF37] transition-colors">DISCORD G7 UMUM</span>
-            </a>
-
-            <!-- 5. Link TikTok G7 -->
-            <a href="https://www.tiktok.com/@gsevenofficial" target="_blank" rel="noopener noreferrer" 
-               class="group flex items-center justify-center gap-3 w-full p-4 btn-gold-border hover:bg-[#D4AF37]/10 rounded-2xl transition-all duration-300 shadow-lg hover:shadow-[#D4AF37]/20 transform hover:-translate-y-1 opacity-0 animate-fade-in delay-5">
-                <span class="text-xl">🎵</span>
-                <span class="font-semibold tracking-wide text-gray-200 group-hover:text-[#D4AF37] transition-colors">TIKTOK G7 OFFICIAL</span>
-            </a>
-
-            <!-- 6. Link Instagram G7 -->
-            <a href="https://www.instagram.com/GSEVEN7799" target="_blank" rel="noopener noreferrer" 
-               class="group flex items-center justify-center gap-3 w-full p-4 btn-gold-border hover:bg-[#D4AF37]/10 rounded-2xl transition-all duration-300 shadow-lg hover:shadow-[#D4AF37]/20 transform hover:-translate-y-1 opacity-0 animate-fade-in delay-6">
-                <span class="text-xl">📸</span>
-                <span class="font-semibold tracking-wide text-gray-200 group-hover:text-[#D4AF37] transition-colors">INSTAGRAM G7 OFFICIAL</span>
-            </a>
-
-        </nav>
-
-        <footer class="mt-10 text-center">
-            <p class="text-gray-500 text-xs flex items-center justify-center gap-1">
-                &copy; 2026 G7 Official. All rights reserved.
-            </p>
-        </footer>
-
-    </main>
-
-    <!-- Modal Pop-up Persyaratan -->
-    <div id="requirementsModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/90 backdrop-blur-md transition-opacity">
-        <div class="bg-gray-900 border-2 border-[#D4AF37] rounded-3xl p-6 md:p-8 max-w-md w-full relative shadow-[0_0_40px_rgba(212,175,55,0.2)] animate-fade-in max-h-[90vh] overflow-y-auto">
-            
-            <!-- Tombol Close -->
-            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white bg-gray-800 hover:bg-red-900/80 rounded-full w-8 h-8 flex items-center justify-center transition-colors z-10">
-                ✕
-            </button>
-            
-            <!-- Judul Dinamis -->
-            <h2 id="modalTitle" class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-[#F3E5AB] mb-6 text-center border-b border-gray-800 pb-4">Syarat Join G7</h2>
-            
-            <div id="requirementsContent" class="animate-fade-in">
-                <ul class="flex flex-col gap-3 text-sm md:text-base text-gray-400">
-                    <li class="flex items-start gap-3">
-                        <span class="text-g7primary text-xl">🛡️</span> 
-                        <span><strong class="text-gray-200">BOY HIGH RANK</strong> MINIMAL 150+</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-g7primary text-xl">✨</span> 
-                        <span><strong class="text-gray-200">GIRL HIGH RANK</strong> MINIMAL 110+</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-g7primary text-xl">🤝</span> 
-                        <span><strong class="text-white">GOOD ATTITUDE</strong></span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-g7primary text-xl">🎂</span> 
-                        <span><strong class="text-white">USIA 16 TAHUN</strong> KE ATAS</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-g7primary text-xl">⚔️</span> 
-                        <span><strong class="text-white">AKTIF SCRIM</strong></span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-g7primary text-xl">🏆</span> 
-                        <span><strong class="text-white">AKTIF RANKED</strong></span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-g7primary text-xl">🏅</span> 
-                        <span><strong class="text-white">AKTIF TURNAMEN</strong></span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-g7primary text-xl">📱</span> 
-                        <span>MEMILIKI <strong class="text-white">DISCORD, TIKTOK, DAN INSTAGRAM</strong></span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-g7primary text-xl">🚫</span> 
-                        <span><strong class="text-white">DILARANG DOUBLE SQUAD</strong></span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="text-g7primary text-xl">☮️</span> 
-                        <span><strong class="text-white">NO DRAMA</strong> DAN <strong class="text-white">NO PROBLEMATIK</strong></span>
-                    </li>
-                </ul>
-                
-                <div class="mt-8">
-                    <button onclick="showForm()" class="w-full p-3 bg-gradient-to-r from-[#D4AF37] to-[#B5952F] hover:from-[#F3E5AB] hover:to-[#D4AF37] text-black rounded-xl font-bold transition-all duration-300 shadow-lg shadow-[#D4AF37]/30">
-                        SAYA MENGERTI & DAFTAR
-                    </button>
-                </div>
-            </div>
-
-            <form id="registrationForm" class="hidden animate-fade-in flex flex-col gap-4 text-sm" onsubmit="submitToWhatsApp(event)">
-                
-                <!-- Data Diri -->
-                <div class="space-y-3 border-b border-gray-800 pb-4">
-                    <p class="text-g7primary font-semibold text-xs tracking-wider">DATA DIRI</p>
-                    
-                    <div>
-                        <label class="block text-gray-400 mb-1">Nama Lengkap</label>
-                        <input type="text" id="regName" required class="w-full bg-black/50 border border-gray-700 focus:border-[#D4AF37] text-white rounded-lg p-2.5 outline-none transition-colors">
-                    </div>
-                    
-                    <div class="grid grid-cols-2 gap-3">
-                        <div>
-                            <label class="block text-gray-400 mb-1">Jenis Kelamin</label>
-                            <select id="regGender" required class="w-full bg-black/50 border border-gray-700 focus:border-[#D4AF37] text-white rounded-lg p-2.5 outline-none transition-colors appearance-none">
-                                <option value="" disabled selected>Pilih...</option>
-                                <option value="Laki-laki">Laki-laki</option>
-                                <option value="Perempuan">Perempuan</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="block text-gray-400 mb-1">Tgl Lahir</label>
-                            <input type="date" id="regDob" required class="w-full bg-black/50 border border-gray-700 focus:border-[#D4AF37] text-white rounded-lg p-2.5 outline-none transition-colors" style="color-scheme: dark;">
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-2 gap-3">
-                        <div>
-                            <label class="block text-gray-400 mb-1">Asal Kota</label>
-                            <input type="text" id="regCity" required class="w-full bg-black/50 border border-gray-700 focus:border-[#D4AF37] text-white rounded-lg p-2.5 outline-none transition-colors">
-                        </div>
-                        <div>
-                            <label class="block text-gray-400 mb-1">No. WhatsApp</label>
-                            <input type="tel" id="regWa" required placeholder="08..." class="w-full bg-black/50 border border-gray-700 focus:border-[#D4AF37] text-white rounded-lg p-2.5 outline-none transition-colors">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Data Game & Sosmed -->
-                <div class="space-y-3 border-b border-gray-800 pb-4">
-                    <p class="text-g7primary font-semibold text-xs tracking-wider">DATA GAME & SOSMED</p>
-
-                    <div class="grid grid-cols-2 gap-3">
-                        <div>
-                            <label class="block text-gray-400 mb-1">Nick MLBB</label>
-                            <input type="text" id="regMlbb" required class="w-full bg-black/50 border border-gray-700 focus:border-[#D4AF37] text-white rounded-lg p-2.5 outline-none transition-colors">
-                        </div>
-                        <div>
-                            <label class="block text-gray-400 mb-1">Role Utama</label>
-                            <select id="regRole" required class="w-full bg-black/50 border border-gray-700 focus:border-[#D4AF37] text-white rounded-lg p-2.5 outline-none transition-colors appearance-none">
-                                <option value="" disabled selected>Pilih Role...</option>
-                                <option value="Roamer">Roamer</option>
-                                <option value="Midlaner">Midlaner</option>
-                                <option value="Gold Laner">Gold Laner</option>
-                                <option value="EXP Laner">EXP Laner</option>
-                                <option value="Jungler">Jungler</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div>
-                        <label class="block text-gray-400 mb-1">High Rank (Jumlah Bintang)</label>
-                        <input type="number" id="regRank" required placeholder="Contoh: 155" class="w-full bg-black/50 border border-gray-700 focus:border-[#D4AF37] text-white rounded-lg p-2.5 outline-none transition-colors">
-                    </div>
-
-                    <div class="grid grid-cols-3 gap-2">
-                        <div>
-                            <label class="block text-gray-400 mb-1 text-xs">TikTok</label>
-                            <input type="text" id="regTiktok" required class="w-full bg-black/50 border border-gray-700 focus:border-[#D4AF37] text-white rounded-lg p-2.5 outline-none transition-colors text-xs">
-                        </div>
-                        <div>
-                            <label class="block text-gray-400 mb-1 text-xs">Discord</label>
-                            <input type="text" id="regDiscord" required class="w-full bg-black/50 border border-gray-700 focus:border-[#D4AF37] text-white rounded-lg p-2.5 outline-none transition-colors text-xs">
-                        </div>
-                        <div>
-                            <label class="block text-gray-400 mb-1 text-xs">Instagram</label>
-                            <input type="text" id="regIg" required class="w-full bg-black/50 border border-gray-700 focus:border-[#D4AF37] text-white rounded-lg p-2.5 outline-none transition-colors text-xs">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Pilihan Admin -->
-                <div>
-                    <label class="block text-gray-400 mb-1">Kirim Ke</label>
-                    <select id="regAdmin" required class="w-full bg-black/50 border border-gray-700 focus:border-[#D4AF37] text-white rounded-lg p-2.5 outline-none transition-colors appearance-none">
-                        <option value="6281237638187">Admin 1 (0812-3763-8187)</option>
-                        <option value="628813461487">Admin 2 (0881-3461-487)</option>
-                    </select>
-                </div>
-
-                <!-- Tombol Navigasi -->
-                <div class="flex gap-3 mt-4">
-                    <button type="button" onclick="showRequirements()" class="w-1/3 p-3 bg-gray-800 hover:bg-gray-700 text-white rounded-xl font-bold transition-all duration-300">
-                        KEMBALI
-                    </button>
-                    <button type="submit" class="w-2/3 p-3 bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:from-[#1EBE5D] hover:to-[#075E54] text-white rounded-xl font-bold transition-all duration-300 shadow-lg shadow-green-900/30 flex items-center justify-center gap-2">
-                        <span>KIRIM VIA WA</span> 📱
-                    </button>
-                </div>
-            </form>
-
-        </div>
-    </div>
-
-    <!-- Script untuk fungsi Modal & Form -->
-    <script>
-        // Fungsi untuk membuka pop-up
-        function openModal() {
-            const modal = document.getElementById('requirementsModal');
-            modal.classList.remove('hidden');
-            document.body.style.overflow = 'hidden'; 
-            showRequirements(); // Reset ke tampilan syarat tiap kali dibuka
+        /* Custom animation for form elements */
+        .fade-in-up {
+            animation: fadeInUp 0.5s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
         }
 
-        // Fungsi untuk menutup pop-up
-        function closeModal() {
-            const modal = document.getElementById('requirementsModal');
-            modal.classList.add('hidden');
-            document.body.style.overflow = 'auto';
-        }
-
-        // Menutup modal jika user klik area luar kotak
-        window.onclick = function(event) {
-            const modal = document.getElementById('requirementsModal');
-            if (event.target == modal) {
-                closeModal();
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
+        
+        /* Staggered delays for child elements */
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-400 { animation-delay: 400ms; }
+        .delay-500 { animation-delay: 500ms; }
+        .delay-600 { animation-delay: 600ms; }
+        .delay-700 { animation-delay: 700ms; }
 
-        // Menampilkan Form Pendaftaran
-        function showForm() {
-            document.getElementById('requirementsContent').classList.add('hidden');
-            document.getElementById('registrationForm').classList.remove('hidden');
-            document.getElementById('modalTitle').innerText = 'Form Pendaftaran G7';
+        /* Custom Input Styling */
+        .esport-input {
+            background-color: rgba(30, 41, 59, 0.7);
+            border: 1px solid #334155;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .esport-input:focus {
+            border-color: #00ffcc;
+            box-shadow: 0 0 10px rgba(0, 255, 204, 0.2);
+            outline: none;
+        }
+        
+        /* Select dropdown styling */
+        select.esport-input option {
+            background-color: #0f172a;
+            color: white;
+        }
+        
+        /* Card styling with subtle neon border */
+        .esport-card {
+            background: linear-gradient(145deg, rgba(15, 23, 42, 0.9), rgba(11, 17, 32, 0.95));
+            border: 1px solid rgba(0, 255, 204, 0.1);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 255, 204, 0.05);
+            backdrop-filter: blur(10px);
         }
 
-        // Kembali Menampilkan Persyaratan
-        function showRequirements() {
-            document.getElementById('requirementsContent').classList.remove('hidden');
-            document.getElementById('registrationForm').classList.add('hidden');
-            document.getElementById('modalTitle').innerText = 'Syarat Join G7';
-        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
 
-        // Mengirim data form ke WhatsApp
-        function submitToWhatsApp(event) {
-            event.preventDefault(); // Mencegah form memuat ulang halaman
+    <div class="esport-card rounded-xl w-full max-w-md p-8 overflow-hidden fade-in-up relative">
+        
+        <!-- Subtle background accent -->
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-esport-accent to-transparent opacity-75"></div>
 
-            // Mengambil nilai dari setiap input
-            const nama = document.getElementById('regName').value;
-            const gender = document.getElementById('regGender').value;
-            const dob = document.getElementById('regDob').value;
-            const city = document.getElementById('regCity').value;
-            const wa = document.getElementById('regWa').value;
+        <div class="text-center mb-8 fade-in-up delay-100">
+            <h1 class="text-5xl font-display text-white mb-1 uppercase tracking-wider">Join G7 <span class="text-esport-accent">Trial</span></h1>
+            <p class="text-slate-400 text-sm font-sans">Isi formulir di bawah ini untuk mendaftar trial kompetitif tim G7.</p>
+        </div>
+
+        <form id="registrationForm" onsubmit="submitForm(event)" class="space-y-6">
             
-            const mlbb = document.getElementById('regMlbb').value;
-            const role = document.getElementById('regRole').value;
-            const rank = document.getElementById('regRank').value;
+            <!-- Nickname Input -->
+            <div class="fade-in-up delay-200">
+                <label for="nickname" class="block text-sm font-semibold text-slate-300 mb-1 tracking-wide">NICKNAME GAME</label>
+                <input type="text" id="nickname" name="nickname" required
+                    class="w-full px-4 py-3 rounded-md esport-input"
+                    placeholder="Masukkan Nickname Anda">
+            </div>
+
+            <!-- Game ID Input -->
+            <div class="fade-in-up delay-300">
+                <label for="gameId" class="block text-sm font-semibold text-slate-300 mb-1 tracking-wide">ID GAME (SERVER)</label>
+                <input type="text" id="gameId" name="gameId" required
+                    class="w-full px-4 py-3 rounded-md esport-input"
+                    placeholder="Contoh: 12345678 (1234)">
+            </div>
+
+            <!-- Role Selection -->
+            <div class="fade-in-up delay-400">
+                <label for="role" class="block text-sm font-semibold text-slate-300 mb-1 tracking-wide">ROLE UTAMA</label>
+                <select id="role" name="role" required
+                    class="w-full px-4 py-3 rounded-md esport-input">
+                    <option value="" disabled selected class="text-slate-500">Pilih Role</option>
+                    <option value="Jungler">Jungler</option>
+                    <option value="Roamer">Roamer</option>
+                    <option value="Mid Laner">Mid Laner</option>
+                    <option value="Gold Laner">Gold Laner</option>
+                    <option value="EXP Laner">EXP Laner</option>
+                </select>
+            </div>
+
+            <!-- High Rank Input -->
+            <div class="fade-in-up delay-500">
+                <label for="highRank" class="block text-sm font-semibold text-slate-300 mb-1 tracking-wide">HIGH RANK (MIN 250*)</label>
+                <input type="number" id="highRank" name="highRank" required min="250"
+                    class="w-full px-4 py-3 rounded-md esport-input"
+                    placeholder="Total Bintang">
+                <p id="rankError" class="text-red-400 text-xs mt-1 hidden font-semibold">Maaf, High Rank minimal adalah 250 bintang.</p>
+            </div>
+
+            <!-- WhatsApp Number Input -->
+            <div class="fade-in-up delay-600">
+                <label for="waNumber" class="block text-sm font-semibold text-slate-300 mb-1 tracking-wide">NOMOR WHATSAPP</label>
+                <input type="tel" id="waNumber" name="waNumber" required
+                    class="w-full px-4 py-3 rounded-md esport-input"
+                    placeholder="Contoh: 081234567890">
+            </div>
+
+            <!-- Submit Button -->
+            <div class="pt-4 fade-in-up delay-700">
+                <button type="submit"
+                    class="w-full bg-esport-accent hover:bg-esport-accentHover text-esport-darker font-bold py-3 px-4 rounded-md shadow-[0_0_15px_rgba(0,255,204,0.4)] hover:shadow-[0_0_25px_rgba(0,255,204,0.6)] transition-all duration-300 flex justify-center items-center gap-2 uppercase tracking-widest">
+                    <!-- WhatsApp Icon SVG -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                      <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                    </svg>
+                    Kirim Pendaftaran
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Get form values
+            const nickname = document.getElementById('nickname').value.trim();
+            const gameId = document.getElementById('gameId').value.trim();
+            const role = document.getElementById('role').value;
+            const highRank = parseInt(document.getElementById('highRank').value, 10);
+            const waNumber = document.getElementById('waNumber').value.trim();
             
-            const tiktok = document.getElementById('regTiktok').value;
-            const discord = document.getElementById('regDiscord').value;
-            const ig = document.getElementById('regIg').value;
-            
-            const adminNumber = document.getElementById('regAdmin').value;
+            const rankError = document.getElementById('rankError');
+            const rankInput = document.getElementById('highRank');
 
-            // Merakit format pesan WhatsApp
-            const message = `Halo Admin G7, saya telah membaca persyaratan dan ingin mendaftar. Berikut data diri saya:
+            // Custom validation for High Rank
+            if (highRank < 250) {
+                rankError.classList.remove('hidden');
+                rankInput.style.borderColor = '#ef4444'; // Red border on error
+                rankInput.style.boxShadow = '0 0 10px rgba(239, 68, 68, 0.2)';
+                return; // Stop submission
+            } else {
+                // Reset error state if valid
+                rankError.classList.add('hidden');
+                rankInput.style.borderColor = ''; // Reset to default CSS class
+                rankInput.style.boxShadow = '';
+            }
 
-*DATA DIRI*
-👤 Nama: ${nama}
-🚻 Kelamin: ${gender}
-🎂 Tgl Lahir: ${dob}
-🏙️ Asal Kota: ${city}
-📞 No WA: ${wa}
+            // Target WhatsApp Number
+            const targetPhone = "6285196942624"; // Indonesian prefix (62) replaces 0
 
-*DATA GAME*
-🎮 Nick MLBB: ${mlbb}
-⚔️ Role Utama: ${role}
-🌟 High Rank: ${rank} Bintang
+            // Construct the message format
+            const message = `🔥 *FORM TRIAL KOMPETITIF G7* 🔥\n\n` +
+                            `*Nickname:* ${nickname}\n` +
+                            `*ID Game:* ${gameId}\n` +
+                            `*Role Utama:* ${role}\n` +
+                            `*High Rank:* ${highRank} Bintang ⭐\n` +
+                            `*No. WhatsApp:* ${waNumber}\n\n` +
+                            `Siap mengikuti trial! 🎮`;
 
-*SOSIAL MEDIA*
-🎵 TikTok: ${tiktok}
-💬 Discord: ${discord}
-📸 Instagram: ${ig}
-
-Terima kasih.`;
-
-            // Mengkonversi format pesan agar bisa dibaca pada link browser
+            // Encode the message for URL
             const encodedMessage = encodeURIComponent(message);
-            
-            // Membuka tab WhatsApp baru dengan nomor dan pesan yang sesuai
-            const whatsappLink = `https://wa.me/${adminNumber}?text=${encodedMessage}`;
-            window.open(whatsappLink, '_blank');
+
+            // Construct WhatsApp URL (using wa.me for better mobile compatibility)
+            const whatsappUrl = `https://wa.me/${targetPhone}?text=${encodedMessage}`;
+
+            // Open WhatsApp in a new tab/window
+            window.open(whatsappUrl, '_blank');
         }
     </script>
-
 </body>
 </html>
